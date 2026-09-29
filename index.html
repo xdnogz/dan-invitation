@@ -13,7 +13,7 @@
 --script:'Pinyon Script',cursive;--serif:'Cormorant Garamond',Georgia,serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--serif);background:var(--ivory);color:var(--ink);font-size:1.15rem;line-height:1.7}
+body{overflow-x:clip;font-family:var(--serif);background:var(--ivory);color:var(--ink);font-size:1.15rem;line-height:1.7}
 img{max-width:100%;display:block}
 section{padding:90px 6vw}
 h2{font-family:var(--script);font-weight:400;font-size:clamp(2.6rem,6vw,3.8rem);color:var(--mauve);text-align:center;line-height:1.2}
@@ -128,7 +128,7 @@ background:linear-gradient(rgba(42,27,51,.62),rgba(20,10,28,.82)),url('LANDING_P
 .link{color:var(--mauve);font-weight:600;letter-spacing:.1em}
 
 /* ===== 9. PHOTO BANNER ===== */
-.banner{padding:0;height:100vh;background:var(--plum)}
+.banner{padding:0;margin:0;width:100%;height:100vh;height:100dvh;overflow:hidden;background:var(--plum)}
 .banner img{width:100%;height:100%;object-fit:cover;}
 @media(min-width:900px){.banner{height:50vh}}
 
@@ -164,14 +164,21 @@ details p{padding:0 0 22px;animation:slide .5s ease}
 /* ===== RESPONSIVE ===== */
 @media(max-width:860px){
 section{padding:70px 6vw}
-.story,.venue,.dress{grid-template-columns:1fr;flex-direction:column;gap:36px}
+.story,.venue,.dress{grid-template-columns:minmax(0,1fr);
 .carousel{position:relative;top:0;max-width:440px;margin:0 auto;width:100%}
-.grid{grid-template-columns:1fr}
+.grid{grid-template-columns:minmax(0,1fr)}
 .card.wide,.center-role{grid-column:auto}
 .center-role{grid-template-columns:1fr}
 .sponsors p{display:block;margin:0}
 .countdown div{width:72px}
 .btn-rsvp{padding:18px 40px}
+.pair{grid-template-columns:minmax(0,1fr)}
+.pair>div+div{margin-top:22px}
+.card{padding:36px 20px;min-width:0;overflow-wrap:anywhere}
+.card p{font-size:1.3rem}
+.card strong{font-size:2rem}
+.card .name{font-size:1.6rem}
+.family{font-size:2.4rem}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
