@@ -461,7 +461,7 @@ section{padding:70px 6vw}
     <h2>The Nuptials</h2><div class="divider"></div>
     <p class="family">Esmeria &amp; Flores</p>
     <div class="grid">
-      <div class="card wide"><h4>The Bride &amp; Groom</h4><p class="name">Dan Marco Esmeria &nbsp;&amp;&nbsp;  Lerie Ann Flores</p></div>
+      <div class="card wide"><h4>The Bride &amp; Groom</h4><p class="name">Dan Marco Esmeria <br> &nbsp;&amp;&nbsp;  <br> Lerie Ann Flores</p></div>
       <div class="card wide"><h4>Parents</h4>
         <div class="pair">
           <div><strong>Parents of the Groom</strong><p>Nomeriano P. Esmeria Jr.</p><p>Loline M. Esmeria</p></div>
@@ -477,7 +477,7 @@ section{padding:70px 6vw}
       </div>
       <div class="card wide"><h4>Groomsmen &amp; Bridesmaids</h4>
         <div class="pair">
-          <div><strong>Groomsmen</strong><p>Tyron John Flores</p><p>Dominador Malong Jr.</p><p>Jean Marc Jaculo</p><p>Andy Ygot</p><p>Jeffrey Gallardo</p></div>
+          <div><strong>Groomsmen</strong><p>Andy Ygot</p><p>Jean Marc Jaculo</p><p>Dominador Malong Jr.</p><p>Tyron John Flores</p><p>Jeffrey Gallardo</p></div>
           <div><strong>Bridesmaids</strong><p>Janine Sumagaysay</p><p>Kim Carla Adamos</p><p>Lianne Esmeria-Malong</p><p>Charisse Esmeria</p><p>Akisha Murillo</p></div>
         </div>
       </div>
@@ -495,7 +495,7 @@ section{padding:70px 6vw}
     <h2>Our Story on Film</h2><div class="divider"></div>
     <div class="video-wrap"><div class="ratio">
       <!-- EDIT: change data-id below to your YouTube video ID (the part after v= in the link). It autoplays muted when guests scroll here. -->
-      <iframe id="ytFrame" data-id="vmvEuum0sSM" title="Couple video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <iframe id="ytFrame" data-id="11hHsxl39zk" title="Couple video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
     </div></div>
     <div class="audio" id="audioBox">
@@ -779,7 +779,7 @@ Please use our official hashtag: #LERIEmadeMARCOmplete</p></details>
 
 /* Video: starts muted when scrolled into view (browsers block autoplay with sound) */
 (function(){var f=document.getElementById('ytFrame');if(!f)return;var id=f.dataset.id;
-if(location.protocol==='file:'){var a=document.createElement('a');a.href='https://www.youtube.com/watch?v='+id;a.target='_blank';a.rel='noopener';
+if(location.protocol==='file:'){var a=document.createElement('a');a.href='www.youtube.com/watch?v='+id;a.target='_blank';a.rel='noopener';
 a.style.cssText='position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;text-decoration:none;text-align:center;font-size:1.2rem;background:linear-gradient(rgba(42,27,51,.55),rgba(42,27,51,.7)),url(https://img.youtube.com/vi/'+id+'/hqdefault.jpg) center/cover';
 a.innerHTML='<span style="font-size:3rem;color:#D4B98A">\u25B6</span>Preview mode: click to watch on YouTube<small>(it plays inside the page once the page is online)</small>';f.replaceWith(a);return}
 new IntersectionObserver(function(es,o){if(es[0].isIntersecting){f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&mute=1&loop=1&playlist='+id+'&playsinline=1&rel=0';o.disconnect()}},{threshold:.4}).observe(f)})();
