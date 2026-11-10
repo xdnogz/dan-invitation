@@ -350,6 +350,12 @@ body.lock{overflow:visible}
 section{padding:30px 6vw;break-inside:avoid}
 }
 
+.venue.flip{grid-template-columns:1.2fr 1fr}
+.venue.flip .map{order:-1}
+@media(max-width:860px){.venue.flip{grid-template-columns:minmax(0,1fr)}.venue.flip .map{order:0}}
+
+.silhouette img.outfit{object-fit:contain;object-position:center bottom;padding:26px 14px 0;transition:opacity .3s}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:860px){
 section{padding:70px 6vw}
@@ -533,35 +539,8 @@ section{padding:70px 6vw}
       </div>
       <div>
         <div class="silhouette">
-          <svg id="dressSvg" viewBox="0 0 300 380" aria-label="Sample formal outfits" style="--gown:#C8A2C8">
-            <defs><linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".12"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity=".12"/></linearGradient></defs>
-            <ellipse cx="150" cy="362" rx="120" ry="8" fill="#000" opacity=".08"/>
-            <!-- lady -->
-            <path d="M76 108Q60 140 68 168" stroke="#EAD2C3" stroke-width="9" stroke-linecap="round" fill="none"/>
-            <path d="M114 108Q130 140 122 168" stroke="#EAD2C3" stroke-width="9" stroke-linecap="round" fill="none"/>
-            <path d="M74 104Q95 96 116 104L121 160Q152 230 168 356H22Q38 230 69 160Z" style="fill:var(--gown)"/>
-            <path d="M74 104Q95 96 116 104L121 160Q152 230 168 356H22Q38 230 69 160Z" fill="url(#sh)"/>
-            <path d="M69 160Q95 170 121 160" stroke="#D4B98A" stroke-width="3" fill="none"/>
-            <rect x="89" y="88" width="12" height="16" fill="#EAD2C3"/>
-            <ellipse cx="95" cy="70" rx="23" ry="26" fill="#4a3040"/>
-            <circle cx="95" cy="74" r="17" fill="#EAD2C3"/>
-            <!-- gentleman -->
-            <rect x="160" y="96" width="15" height="112" rx="7" fill="#2A1B33"/><rect x="235" y="96" width="15" height="112" rx="7" fill="#2A1B33"/>
-            <circle cx="167" cy="214" r="7" fill="#EAD2C3"/><circle cx="243" cy="214" r="7" fill="#EAD2C3"/>
-            <rect x="176" y="206" width="28" height="146" fill="#2A1B33"/><rect x="206" y="206" width="28" height="146" fill="#2A1B33"/>
-            <ellipse cx="188" cy="355" rx="17" ry="6" fill="#111"/><ellipse cx="222" cy="355" rx="17" ry="6" fill="#111"/>
-            <path d="M172 92H238L246 214H164Z" fill="#2A1B33"/>
-            <path d="M172 92H238L246 214H164Z" fill="url(#sh)"/>
-            <path d="M196 92L205 146L214 92Z" fill="#fff"/>
-            <path d="M205 104L199 116L205 160L211 116Z" style="fill:var(--gown)"/>
-            <path d="M196 92L205 150M214 92L205 150" stroke="#5a4668" stroke-width="2"/>
-            <rect x="222" y="122" width="12" height="7" style="fill:var(--gown)"/>
-            <rect x="199" y="80" width="12" height="14" fill="#EAD2C3"/>
-            <circle cx="205" cy="66" r="17" fill="#EAD2C3"/>
-            <path d="M187 62Q205 36 223 62Q205 52 187 62Z" fill="#2A1B33"/>
-          </svg>
-          <!-- OPTIONAL: add your own picture named outfit-silhouette.png next to this page to replace the drawing -->
-          <img src="outfit-silhouette.png" alt="Outfit guide" onerror="this.remove()">
+          <!-- Colors change when a swatch is tapped. Files: outfit-lilac.webp, outfit-mauve.webp, outfit-blush.webp, outfit-champagne.webp -->
+          <img class="outfit" id="outfitImg" src="outfit-lilac.webp" alt="Sample formal outfits in our wedding colors">
         </div>
       </div>
     </div>
@@ -618,6 +597,37 @@ section{padding:70px 6vw}
       <ul><li>[EDIT: Hotel name] <span>[EDIT: distance]</span></li><li>[EDIT: Hotel name] <span>[EDIT: distance]</span></li><li>[EDIT: Hotel name] <span>[EDIT: distance]</span></li></ul>
       <a class="btn-sm" href="https://www.google.com/maps/search/hotels+near+Quezon+City" target="_blank" rel="noopener">Hotels near the venue</a>
     </div> -->
+  </div>
+</section>
+
+<!-- RECEPTION VENUE -->
+<section id="reception" class="deco">
+  <div class="reveal">
+    <h2>Reception Venue</h2><div class="divider"></div>
+    <div class="venue flip">
+      <div>
+        <h3>Artan Garden Resort</h3>
+        <p><span class="lbl">Address</span>92 J. P. Rizal, Santa Lucia, Novaliches, Quezon City, 1117 Metro Manila</p>
+        <p><span class="lbl">Date</span>Monday, December 28, 2026</p>
+        <p><span class="lbl">Reception</span>5:00 PM</p>
+        <div class="btns"><a class="btn-sm" href="https://www.google.com/maps/search/?api=1&query=92%20J.%20P.%20Rizal%2C%20Santa%20Lucia%2C%20Novaliches%2C%20Quezon%20City%2C%201117%20Metro%20Manila" target="_blank" rel="noopener">Google Maps</a></div>
+        <p style="margin-top:10px"><span class="lbl">Parking</span>Parking is available at the resort on a first-come, first-served basis. Please arrive early to secure a spot.</p>
+        <span class="lbl">How to get there</span>
+        <ol class="route">
+          <li><strong>From the church:</strong> The resort is about a one-minute walk from Iglesia ni Cristo, Lokal ng Sta. Lucia, along J.P. Rizal Street.</li>
+          <li><strong>By car or motorcycle:</strong> Tap the Google Maps button and follow the directions to the resort.</li>
+          <li><strong>From Novaliches Bayan:</strong> Board a jeepney bound for Novaliches-Jordan Plains or Novaliches-Gulod. Get off at Quirino Highway corner J.P. Rizal St., then take a short tricycle ride to the resort.</li>
+          <li><strong>From SM City Fairview / Nova Stop:</strong> Take a southbound jeepney or UV Express to Novaliches Bayan, then a tricycle to Barangay Sta. Lucia.</li>
+          <li><strong>From EDSA (Trinoma / SM North):</strong> Take a UV Express or jeepney to Novaliches Bayan, then a tricycle straight to the resort.</li>
+          <li><strong>Commuter tip:</strong> Tell the driver "Artan Garden Resort, J.P. Rizal, Sta. Lucia," or use Iglesia ni Cristo, Lokal ng Sta. Lucia as your landmark.</li>
+        </ol>
+        <span class="lbl">Good to know</span>
+        <p>Our coordinators will help you find your seat after registration.</p>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=92+J.+P.+Rizal,+Santa+Lucia,+Novaliches,+Quezon+City,+1117+Metro+Manila&output=embed" title="Reception venue map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -759,10 +769,15 @@ Please use our official hashtag: #LERIEmadeMARCOmplete</p></details>
   },2500);
 })();
 
-/* Dress code swatches: recolor the outfits */
+/* Dress code swatches: swap the couple picture */
 (function(){
-  var note=document.getElementById('swNote'),svg=document.getElementById('dressSvg'),all=document.querySelectorAll('.sw');
-  function pick(b){all.forEach(function(x){x.classList.remove('sel')});b.classList.add('sel');svg.style.setProperty('--gown',b.dataset.c);note.textContent=b.dataset.n+' — '+b.dataset.d}
+  var note=document.getElementById('swNote'),img=document.getElementById('outfitImg'),all=document.querySelectorAll('.sw');
+  var files={'Lilac':'outfit-lilac.webp','Mauve':'outfit-mauve.webp','Blush Pink':'outfit-blush.webp','Champagne':'outfit-champagne.webp'};
+  Object.keys(files).forEach(function(k){var p=new Image();p.src=files[k]});
+  function pick(b){all.forEach(function(x){x.classList.remove('sel')});b.classList.add('sel');
+    var f=files[b.dataset.n];
+    if(img&&f&&img.getAttribute('src')!==f){img.style.opacity=0;setTimeout(function(){img.src=f;img.style.opacity=1},220)}
+    note.textContent=b.dataset.n+' \u2014 '+b.dataset.d}
   all.forEach(function(b){b.addEventListener('click',function(){pick(b)})});
   pick(all[0]);
 })();
@@ -891,7 +906,8 @@ document.getElementById('shareBtn').addEventListener('click',function(){
   ['#gifts h2',["Gabay sa Regalo"]],
   ['.gift-card p',["Sa lahat ng mayroon kami, kami ay tunay na pinagpala.<br>Ang inyong presensya at panalangin ang tanging hiling namin,<br>Ngunit kung nais ninyong magbigay pa rin,<br>Salapi ang aming iminumungkahi."]],
   ['#venue h2',["Ang Lugar"]],
-  ['.venue .lbl',["Tirahan", "Petsa", "Seremonya", "Handaan", "Paradahan", "Paano pumunta", "Mahalagang Malaman"]],
+  ['.venue .lbl',["Tirahan", "Petsa", "Seremonya", "Handaan", "Paradahan", "Paano pumunta", "Mahalagang Malaman", "Tirahan", "Petsa", "Handaan", "Paradahan", "Paano pumunta", "Mahalagang Malaman"]],
+  ['#reception h2',["Lugar ng Handaan"]],
   ['.stay h3',["Mga malapit na matutuluyan"]],
   ['#program h2',["Takbo ng Araw"]],
   ['.program b',["Seremonya", "Larawan", "Cocktails", "Handaan"]],
